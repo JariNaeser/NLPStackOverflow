@@ -1,5 +1,11 @@
 import crawler
 import time
+import sys
+
+
+def main():
+    args = int(sys.argv[1])
+    runCrawler(args)    
 
 def runCrawler(times):
 
@@ -14,4 +20,5 @@ def runCrawler(times):
     print(f"------ Crawler runner ended ------")
     print(f"Elapsed time: {elapsed_time} seconds")
 
-runCrawler(10)
+if __name__ == "__main__":
+    main()
