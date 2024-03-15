@@ -62,14 +62,12 @@ def print_to_csv(tags, texts):
         for tag, text in zip(tags, texts):
             writer.writerow({'text': text, 'tag': tag})
 
-    print("CSV file has been created successfully.")
-
 def runCrawler():
     print(f"Crawler [PID: {os.getpid()}] started...")
 
     data = get_data("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow&pagesize=100")
     get_links(data) 
 
-    print(f"Crawler [PID: {os.getpid()}] is done...")
+    print(f"Crawler [PID: {os.getpid()}] is done...\n")
 
 
