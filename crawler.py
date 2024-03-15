@@ -3,6 +3,7 @@ import json
 from bs4 import BeautifulSoup
 import csv
 import re
+import os
 
 def get_data(api):
     response = requests.get(f"{api}")
@@ -63,6 +64,12 @@ def print_to_csv(tags, texts):
 
     print("CSV file has been created successfully.")
 
+def runCrawler():
+    print(f"Crawler [PID: {os.getpid()}] started...")
 
-data = get_data("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow&pagesize=100")
-get_links(data)
+    data = get_data("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow&pagesize=100")
+    get_links(data) 
+
+    print("Crawler [PID: {os.getpid()}] is done...")
+
+
