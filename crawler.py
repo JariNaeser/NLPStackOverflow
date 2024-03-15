@@ -70,6 +70,6 @@ def runCrawler():
     data = get_data("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow&pagesize=100")
     get_links(data) 
 
-    print("Crawler [PID: {os.getpid()}] is done...")
+    print(f"Crawler [PID: {os.getpid()}] is done...")
 
 
