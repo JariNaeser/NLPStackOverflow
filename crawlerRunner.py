@@ -14,6 +14,7 @@ def runCrawler(times):
 
     for i in range(times):
         crawler.runCrawler()
+        time.sleep(1.0)
 
     end = time.time()
     elapsed_time = end - start
