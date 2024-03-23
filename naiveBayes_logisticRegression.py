@@ -14,7 +14,7 @@ with open('filtered_data.csv', 'r') as file:
 
     #Add in training only the first half of the rows in the csv, then in test the next half
     for i, row in enumerate(csv_reader):
-        if i < 500:
+        if i < 1000:
             labels_list_training.append(row[0])
             text_list_training.append(row[1])
         else:
